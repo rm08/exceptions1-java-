@@ -33,6 +33,17 @@ public class Program {
 		try {
 		acc.withdraw(amount);
 		System.out.printf("New balance: %.2f%n", acc.getBalance());
+		System.out.println();
+		System.out.print("Would you like to make another withdrawal (y/n): ");
+		char asw = sc.next().charAt(0);
+		if (asw == 'y') {
+			System.out.print("Enter amount for withdraw: ");
+			amount = sc.nextDouble();
+			acc.withdraw(amount);
+			System.out.printf("New balance: %.2f%n", acc.getBalance());
+		}else {
+			System.out.printf("Shutting down");
+		}
 		}
 		catch (BusinessException e) {
 			System.out.println(e.getMessage());
