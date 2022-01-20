@@ -39,7 +39,7 @@ public class Program {
 		if (asw == 'y') {
 			System.out.print("Enter amount for withdraw: ");
 			amount = sc.nextDouble();
-			acc.withdraw(amount);
+			acc.newwithdraw(amount);
 			System.out.printf("New balance: %.2f%n", acc.getBalance());
 		}else {
 			System.out.printf("Shutting down");

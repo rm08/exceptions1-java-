@@ -55,6 +55,13 @@ public class Account {
 	public void withdraw (double amount) {
 		validateWithdraw(amount);
 		balance -= amount;
+		withdrawLimit -= amount;
+	}
+	
+	public void newwithdraw (double amount) {
+		validateWithdraw(amount);
+		withdrawLimit -= amount;
+		balance -= amount;
 	}
 	
 	private void validateWithdraw(double amount) {
